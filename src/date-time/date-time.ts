@@ -1,29 +1,38 @@
 import { Component, Input } from '@angular/core';
 
-import { NgBsTimerConfig } from './timer-config';
+import { NgBsDateTimeConfig } from './date-time-config';
 
 @Component({
-  selector: 'ng-bs-timer',
+  selector: 'ng-bs-date-time',
   template: `
     <label [class]="labelClasses">{{date | date: [datePipe]}}</label>
   `
 })
 
-export class NgBsTimer {
+export class NgBsDateTime {
   /**
    * Method by which the timer gets its initial value. This accepts following values: "remote", "local".
    */
   @Input() method: string;
 
+  /**
+   * Add label css classes for styling this component.
+   */
   @Input() labelClasses: string;
 
+  /**
+   * Angular DatePipe for formatting date.
+   */
   @Input() datePipe: string;
 
+  /**
+   * Timer interval for component
+   */
   @Input() interval: number;
 
   date: Date;
 
-  constructor(private config: NgBsTimerConfig) {
+  constructor(private config: NgBsDateTimeConfig) {
     this.method = config.method;
 
     this.labelClasses = config.labelClasses;

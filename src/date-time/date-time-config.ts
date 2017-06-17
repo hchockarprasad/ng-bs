@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class NgBsTimerConfig {
+export class NgBsDateTimeConfig {
   method = 'local';
 
   labelClasses = 'text-white';
