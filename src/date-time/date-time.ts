@@ -5,7 +5,7 @@ import { NgBsDateTimeConfig } from './date-time-config';
 @Component({
   selector: 'ng-bs-date-time',
   template: `
-    <label [class]="labelClasses">{{date | date: [datePipe]}}</label>
+    <label [class]="labelClasses">{{date | date: [format]}}</label>
   `
 })
 
